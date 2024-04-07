@@ -10,7 +10,7 @@ const menuItems = [
     subTitle: "Visualización",
   },
   {
-    path: "/dashboard/main",
+    path: "/dashboard/counter",
     icon: <IoCalculator size={35} />,
     title: "Counter",
     subTitle: "Contador Client Side",
