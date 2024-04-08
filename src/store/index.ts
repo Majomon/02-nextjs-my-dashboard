@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import counterReducer from "./counter/counterSlice";
 
 export const store = configureStore({
-  reducer: { counterReducer },
+  reducer: { counter: counterReducer },
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
