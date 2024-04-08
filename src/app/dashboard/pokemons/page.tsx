@@ -1,5 +1,4 @@
 import { PokemonGrid, PokemonsResponse, SimplePokemon } from "@/app/pokemons";
-import Image from "next/image";
 
 const getPokemons = async (
   limit = 20,
@@ -14,8 +13,11 @@ const getPokemons = async (
     name: pokemon.name,
   }));
 
+  // throw new Error("Esto es un error que no debería de suceder");
   return pokemons;
 };
+
+
 
 export default async function PokemonsPage() {
   const pokemons = await getPokemons(151);
@@ -24,7 +26,7 @@ export default async function PokemonsPage() {
       <span className="text-5xl my-2">
         Listado de Pokémons <small>estático</small>
       </span>
-        <PokemonGrid pokemons={pokemons}/>
+      <PokemonGrid pokemons={pokemons} />
     </div>
   );
 }
